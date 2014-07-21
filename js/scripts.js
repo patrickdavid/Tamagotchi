@@ -1,9 +1,9 @@
 var Tamagotchi = {
   initialize: function(name) {
   this.name = name;
-  this.foodLevel = 10;
-  this.sleepLevel = 10;
-  this.activityLevel = 10;
+  this.foodLevel = 2;
+  this.sleepLevel = 2;
+  this.activityLevel = 2;
   },
   timePasses: function() {
     this.foodLevel = this.foodLevel - Math.random();
@@ -11,7 +11,6 @@ var Tamagotchi = {
     this.activityLevel = this.activityLevel - Math.random();
   },
   isAlive: function() {
-    console.log(this.foodLevel);
     if (this.foodLevel > 0) {
       return true;
     } else {
@@ -29,16 +28,22 @@ $(document).ready(function(){
     newName.initialize();
     newName.name = $("input#name").val();
 
-    setInterval(function(){
+    $("#tom-name").text(newName.name);
+
+    var intervalID = setInterval(function() {
       newName.timePasses();
     $("#food").text(newName.foodLevel);
     $("#sleep").text(newName.sleepLevel);
+    if ((newName.foodLevel < 0) || (newName.sleepLevel < 0)) {
+      $("#output").text("You are not ready for life");
+      clearInterval(intervalID);
+      console.log(newName.isAlive())
+    }
     $("#activity").text(newName.activityLevel);
        }, 3000);
 
-    $("#food").text(newName.foodLevel);
-    $("#sleep").text(newName.sleepLevel);
-    $("#activity").text(newName.activityLevel);
+
+
   });
 });
 

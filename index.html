@@ -12,13 +12,16 @@
     <div class="container">
       <img src="http://www.destructoid.com//ul/244528-2.jpg">
       <h4>Create a pet, make a friend</h4>
-      <form id="Tamagotchi">
+      <div class="row">
+      <form id="Tamagotchi" class="col-md-3">
         <div class="form-group">
           <label for="input">name</label>
           <input id="name" type="text">
         </div>
         <button class="btn" type="submit" id="btn">Submit</button>
       </form>
+      </div>
+      <h2 id="tom-name">Your new loved one: </h2>
       <div class"row">
       <p class="col-md-4" class ="text-center">Food</p>
       <p class="col-md-4" class ="text-center">Sleep</p>
@@ -28,7 +31,7 @@
         <div id="food" class="col-md-4"></div>
         <div id="sleep" class="col-md-4"></div>
         <div id="activity" class="col-md-4"></div>
-      <p><span id="output"></span> </p>
+      <h2 id="output"></h2>
     </div>
     </div>
   </body>
