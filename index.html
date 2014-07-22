@@ -13,19 +13,28 @@
       <img src="http://www.destructoid.com//ul/244528-2.jpg">
       <h4>Create a pet, make a friend</h4>
       <div class="row">
-      <form id="Tamagotchi" class="col-md-3">
-        <div class="form-group">
-          <label for="input">name</label>
-          <input id="name" type="text">
-        </div>
-        <button class="btn" type="submit" id="btn">Submit</button>
-      </form>
+        <form id="Tamagotchi" class="col-md-3">
+          <div class="form-group">
+            <label for="input">name</label>
+            <input id="name" type="text">
+          </div>
+          <button class="btn" type="submit" id="btn">Submit</button>
+        </form>
       </div>
-      <h2 id="tom-name">Your new loved one: </h2>
+      <h2 id="friend-list">Your new loved ones: </h2>
+      <div id="toms-list">
+      </div>
       <div class"row">
-      <p class="col-md-4" class ="text-center">Food</p>
-      <p class="col-md-4" class ="text-center">Sleep</p>
-      <p class="col-md-4" class ="text-center">Activity</p>
+        <div>
+          <p class="col-md-4" class ="text-pos">Food</p>
+          <p class="col-md-4" class ="text-pos">Sleep</p>
+          <p class="col-md-4" class ="text-pos">Activity</p>
+        </div>
+        <div>
+          <button class="feed-button col-md-4 btn btn-primary btn-sm" type="submit">feed</button>
+          <button class="nap-button col-md-4 btn btn-primary btn-sm" type="submit">naptime</button>
+          <button class="play-button col-md-4 btn btn-primary btn-sm" type="submit">play</button>
+        </div>
       </div>
       <div class = "row">
         <div id="food" class="col-md-4"></div>

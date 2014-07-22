@@ -1,7 +1,16 @@
-h4 {
-  padding-top: 50px;
+span.toggle {
+  cursor: pointer;
+  color: blue;
 }
 
-#sides{
-  padding-top: 30px;
+span.toggle:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  width: 250px;
+  margin: 20px;
+}
+.text-pos {
+  text-align: center;
 }
